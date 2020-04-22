@@ -1,0 +1,7 @@
+{
+  "name": "app-dev-mallia-calafiore",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
