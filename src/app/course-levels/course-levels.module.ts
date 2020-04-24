@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { CourseLevelsPageRoutingModule } from './course-levels-routing.module';
 
 import { CourseLevelsPage } from './course-levels.page';
+import { SharedComponentsModule } from '../modules/shared-components/shared-components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CourseLevelsPageRoutingModule
+    CourseLevelsPageRoutingModule,
+    SharedComponentsModule
   ],
   declarations: [CourseLevelsPage]
 })
