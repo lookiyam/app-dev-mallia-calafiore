@@ -5,14 +5,14 @@
 </ion-header>
 
 <ion-content>
-  <img src="../assets/icon/Arts.png" id="img" class="center">
-  <ion-text>
+  <img src="../assets/icon/Arts.png" id="img" class="center-img">
+  <ion-text class="sub-title">
     <h1>Bacheleor of Arts</h1>
     <h5>Graphic Design</h5>
   </ion-text>
   
-  <ion-card id="title-card">
-    <ion-text>
+  <ion-card id="title-card" class="info" >
+    <ion-text >
       <p>Communicating messages successfully via graphic design,
         requires a high level of understanding of the visual art of
         representation.
@@ -43,6 +43,20 @@
     </ion-text>
   </ion-card>
 
-  <ion-button expand="block">Students Works</ion-button>
+  <ion-text class="sub-title">
+    <h1>Student Work</h1>
+  </ion-text>
+
+    <ion-slides [options]="categorySlideOpts" class="student-slider">
+      <ion-slide *ngFor="let i of [1, 2, 3, 4, 5]">
+          <div class="student-card">
+              <div
+                  [ngStyle]="{ 'background-image': 'url(/assets/shapes.svg)' }"
+                  class="background-image ion-activatable ripple-parent">
+              </div>
+              <h4 class="info">Info of the work</h4>
+          </div>
+      </ion-slide>
+  </ion-slides>
 
 </ion-content>
