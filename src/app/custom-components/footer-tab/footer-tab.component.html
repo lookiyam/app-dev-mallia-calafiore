@@ -1,12 +1,10 @@
 <ion-footer>
   <ion-toolbar>
     <ion-buttons slot="primary">
-        <ion-button>
-            <ion-icon name="menu-outline" slot="icon-only"></ion-icon>
-        </ion-button>
+      <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-buttons slot="start">
-      <ion-button>
+      <ion-button (click)="location.back()">
         <ion-icon name="arrow-back-outline" slot="icon-only"></ion-icon>
       </ion-button>
     </ion-buttons>
