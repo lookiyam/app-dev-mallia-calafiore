@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: 'home', // <- here is the home page
     pathMatch: 'full'
   },
   {
@@ -15,6 +15,9 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
+
+  // You might also want to improve this part for yourself; like having a folder with a subchild
+  // especially for when we'll use the course data.
   {
     path: 'course-levels',
     loadChildren: () => import('./course-levels/course-levels.module').then( m => m.CourseLevelsPageModule)
