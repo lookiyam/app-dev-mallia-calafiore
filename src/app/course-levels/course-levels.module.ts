@@ -11,6 +11,8 @@ import { SharedComponentsModule } from '../modules/shared-components/shared-comp
 
 @NgModule({
   imports: [
+    // imported ionic module in order to let angular read the ionic custom items
+    // imported the shared component module to make the page read the created footer
     CommonModule,
     FormsModule,
     IonicModule,

@@ -9,6 +9,7 @@ import { Location } from "@angular/common";
 export class FooterTabComponent implements OnInit {
 
   constructor(
+    // added public location in order to redirect the page backward through the back button in html
     public location: Location
   ) { }
 

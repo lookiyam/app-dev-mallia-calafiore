@@ -12,6 +12,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public appPages = [
+    //redirect all the components of the menue to empty = homepage
     {
       title: 'About',
       url: '',

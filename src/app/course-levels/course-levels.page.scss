@@ -1,3 +1,4 @@
+//made the title in the middle with a font size to repsent a title. Included with the font family
 ion-title{
     text-align: center;
     font-weight: bold;
@@ -5,11 +6,13 @@ ion-title{
     font-family: Arial, Helvetica, sans-serif
 
 }
+//made the icon in the middle of the page with margins so it always stays in the middle with different screens 
 .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
+//padding top and bottom was added so there will be space between them and text algin so the text always stays to the left
 .list{
     padding-bottom: 0.5rem;
     padding-top: 0.5rem;

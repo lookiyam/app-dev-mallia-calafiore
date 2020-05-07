@@ -6,6 +6,7 @@ ion-title{
 }
 
 #title-card{
+    //made the title in the middle with a font size to repsent a title. Included with the font family
     ion-card-title {
         text-align: center;
         font-size: 1rem;
@@ -13,6 +14,7 @@ ion-title{
         padding: 0.3rem;
         }
 }
+//img is a block and add marggins so it always stays in the middle added padding to the top so there is space
 #img{
     display: block;
     margin-left: auto;
@@ -20,6 +22,7 @@ ion-title{
     padding-top: 0.3rem;
 }
 
+//to show the ripple effect all around the card
 .ripple-parent {
     position: relative;
     overflow: hidden;
