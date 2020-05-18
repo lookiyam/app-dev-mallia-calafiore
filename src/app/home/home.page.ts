@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProspectusService } from '../services/prospectus.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
 
-  constructor() { }
+  public institutes: any[] = [];
 
-  ngOnInit() {
+  constructor(
+    public prospectusService: ProspectusService
+  ) { }
+
+  ngOnInit()
+  {
+    this.institutes = this.prospectusService.getInstitutes();
+
+    // filters out the cpd entry
+    //this.institutes = this.institutes.filter(i => i.code != 'cpd');
   }
 
 }
