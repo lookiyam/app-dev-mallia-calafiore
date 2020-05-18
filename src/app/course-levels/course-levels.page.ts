@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ProspectusService } from '../services/prospectus.service';
 
 @Component({
   selector: 'app-course-levels',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseLevelsPage implements OnInit {
 
-  constructor() { }
+  public institute: any = {};
 
-  ngOnInit() {
+  constructor(
+    public route: ActivatedRoute,
+    public prospectusService: ProspectusService
+  ) { }
+
+  ngOnInit()
+  {
+    const code = this.route.snapshot.params.code;
+    this.institute = this.prospectusService.getInstitute(code);
+
+    // filters out the cpd entry
+    //this.institutes = this.institutes.filter(i => i.code != 'cpd');
   }
-
 }

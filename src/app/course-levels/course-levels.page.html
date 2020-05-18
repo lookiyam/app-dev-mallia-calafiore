@@ -1,32 +1,20 @@
 <ion-header>
   <ion-toolbar>
-      <ion-title>Creative Arts</ion-title>
+      <ion-title>{{ institute.name_eng }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <img src="../assets/icon/Arts.png" id="img" class="center">
+  <img [src]="'/assets/icon/' + prospectusService.getInstituteIcon(institute)" id="img" class="center">
 
   <!-- the page is composed by an ion card that comprehends a list item
   with labels and an icon, the ion item works as a button that redirects to course list page
   by routerLink-->
   <ion-card id="title-card">
-    <ion-list>
+    <ion-list *ngFor="let course of institute.courses">
       <ion-item button ripple routerLink="/course-list">
-        <ion-label class="list">Certificate</ion-label>
-          <ion-icon name="arrow-forward-outline"></ion-icon>
-      </ion-item>
-      <ion-item button ripple routerLink="/course-list">
-        <ion-label class="list">Diploma</ion-label>
-          <ion-icon name="arrow-forward-outline"></ion-icon>
-      </ion-item>
-      <ion-item button ripple routerLink="/course-list">
-        <ion-label class="list">Advanced Diploma</ion-label>
-          <ion-icon name="arrow-forward-outline"></ion-icon>
-      </ion-item>
-      <ion-item button ripple routerLink="/course-list">
-        <ion-label class="list">Bachelor of Arts</ion-label>
-          <ion-icon name="arrow-forward-outline"></ion-icon>
+        <ion-label class="list">{{ course.title }}</ion-label>
+        <ion-icon name="arrow-forward-outline"></ion-icon>
       </ion-item>
     </ion-list>
   </ion-card>

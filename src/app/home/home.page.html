@@ -16,7 +16,7 @@ the images are called by using img src-->
         size="6"
         *ngFor="let institute of institutes">
         <div class="ion-activatable ripple-parent">
-          <ion-card id="title-card" routerLink='/course-levels'>
+          <ion-card id="title-card" [routerLink]="['/', 'course-levels', institute.code]">
             <img [src]="'/assets/icon/' + prospectusService.getInstituteIcon(institute)" id="img">
             <ion-card-title>{{ institute.name_en }}</ion-card-title>
           </ion-card>

@@ -45,6 +45,8 @@ export class ProspectusService
           case 'iict': return 'IT.png';
           case 'gc': return 'Gozo.png';
           case 'gd': return '';
+          case 'md': return 'Masters.png';
+          case 'cpd': return '';
 
         }
           return '';
