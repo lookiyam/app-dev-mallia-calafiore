@@ -13,8 +13,7 @@
   <ion-card id="title-card">
     <ion-list *ngFor="let course of institute.courses">
       <ion-item button ripple routerLink="/course-list">
-        <ion-label class="list">{{ course.title }}</ion-label>
-        <ion-icon name="arrow-forward-outline"></ion-icon>
+        <ion-label class="list" text-wrap >{{ course.title }}</ion-label>
       </ion-item>
     </ion-list>
   </ion-card>
