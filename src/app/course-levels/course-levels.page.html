@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-      <ion-title>{{ institute.name_eng }}</ion-title>
+      <h3 text-wrap>{{ prospectusService.getInstituteName(institute) }}</h3>
   </ion-toolbar>
 </ion-header>
 
@@ -12,7 +12,7 @@
   by routerLink-->
   <ion-card id="title-card">
     <ion-list *ngFor="let course of institute.courses">
-      <ion-item button ripple routerLink="/course-list">
+      <ion-item button ripple routerLink="/course-info">
         <ion-label class="list" text-wrap >{{ course.title }}</ion-label>
       </ion-item>
     </ion-list>

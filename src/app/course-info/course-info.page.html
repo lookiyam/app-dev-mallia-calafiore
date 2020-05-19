@@ -1,12 +1,12 @@
 <ion-header>
   <ion-toolbar>
-      <ion-title>Creative Arts</ion-title>
+    <h3 text-wrap>{{ prospectusService.getInstituteName(institute) }}</h3>
   </ion-toolbar>
 </ion-header>
 <!--this page comprehend a card within just some paragraphs, than we implemented
   an ion slider-->
 <ion-content>
-  <img src="../assets/icon/Arts.png" id="img" class="center-img">
+  <img [src]="'/assets/icon/' + prospectusService.getInstituteIcon(institute)" id="img" class="center-img">
   <ion-text class="sub-title">
     <h1>Bacheleor of Arts</h1>
     <h5>Graphic Design</h5>
