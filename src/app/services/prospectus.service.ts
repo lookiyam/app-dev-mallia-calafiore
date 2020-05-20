@@ -73,6 +73,10 @@ export class ProspectusService
       {
         var institute = this._data.find(i => i.courses.find(i => i.code == code));     
         var course = institute.courses.find(c => c.code== code);
+        
+        // this adds the institute name in the course
+        course.institute = institute.name_en;
+        
         return course;
       }
 

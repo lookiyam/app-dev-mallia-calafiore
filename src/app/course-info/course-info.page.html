@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <h3 text-wrap>{{ prospectusService.getCourseName(course) }}</h3>
+    <h3 text-wrap>{{ course.institute }}</h3> 
   </ion-toolbar>
 </ion-header>
 <!--this page comprehend a card within just some paragraphs, than we implemented
@@ -8,43 +8,16 @@
 <ion-content>
   <img [src]="" id="img" class="center-img">
   <ion-text class="sub-title">
-    <h1>{{ prospectusService.getCourseName(course) }}</h1>
-    <h5>Graphic Design</h5>
+    <h1>{{ course.title }}</h1>
+    <h5>{{ course.code }}</h5>
   </ion-text>
   
   <ion-card id="title-card" class="info" >
     <ion-text >
-      <p>experiment here</p>
-
-      <p>Communicating messages successfully via graphic design,
-        requires a high level of understanding of the visual art of
-        representation.
-      </p>
-
-      <p>This highly contextualised curriculum draws on contemporary
-        design practice, 
-        together with theoretical and historical cultural material.
-      </p>
-
-      <p>The degree equips learners with the knowledge to explore and
-        challenge creative boundaries, through real-life design scenarios.
-      </p>
-
-      <p>They will hone their skills in fundamental design principles such as layout,
-        form, typography, iconography and colour.
-      </p>
-
-      <p>analyse a wide range of
-        professional design problems,
-        and find creative and innovative solutions using various media.
-      </p> 
-      <p> 
-        Traditional and digital tools will be explored in disciplines
-        such as editorial design, web design, signage,
-        advertising and packaging.
-      </p> 
+      <p *ngFor="let paragraph of course.desc_en">{{ paragraph }}</p>
     </ion-text>
   </ion-card>
+  
   <!-- sub title add so it diveds the sections
   slider used ion-slide where the images can be scrolled sideways where it takes the image from the url assets
 in the bottom can be add info of the work -->
