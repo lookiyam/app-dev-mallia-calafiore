@@ -46,9 +46,9 @@ export class ProspectusService
           case 'iet': return 'Engineering.png';
           case 'iict': return 'IT.png';
           case 'gc': return 'Gozo.png';
-          case 'gd': return '';
+          case 'gd': return 'GenericDegree.png';
           case 'md': return 'Masters.png';
-          case 'cpd': return '';
+          case 'cpd': return 'CPD.png';
 
         }
           return '';

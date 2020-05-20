@@ -12,8 +12,9 @@ export class CourseInfoPage implements OnInit {
 
   // This needs to reference a course, not an institute!
 
+
   public course: any = {};
-  
+
 
 
   constructor(
@@ -28,7 +29,9 @@ export class CourseInfoPage implements OnInit {
 
     // This service function needs to change -> see getRecipe
     
+    this.course = this.prospectusService.getInstitute(code);
     this.course = this.prospectusService.getCourse(code);
+
 
   
   }
