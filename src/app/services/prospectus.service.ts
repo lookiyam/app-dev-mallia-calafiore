@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { CourseInfoPage } from '../course-info/course-info.page';
 
 
 @Injectable({
@@ -68,12 +69,15 @@ export class ProspectusService
         return this._data;
       }
 
-      public getCourses(code: string)
+      public getCourse(code: string):any
       {
         var institute = this._data.find(i => i.courses.find(i => i.code == code));     
         var course = institute.courses.find(c => c.code== code);
         return course;
-        
-        
+      }
+
+      public getCourseName(courses: any): string
+      {
+        return courses;
       }
     }
