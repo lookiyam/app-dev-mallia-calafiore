@@ -6,7 +6,7 @@
 <!--this page comprehend a card within just some paragraphs, than we implemented
   an ion slider-->
 <ion-content>
-  <img [src]="" id="img" class="center-img">
+  
   <ion-text class="sub-title">
     <h1>{{ course.title }}</h1>
     <h5>{{ course.code }}</h5>
@@ -15,12 +15,14 @@
   <ion-card id="title-card" class="info" >
     <ion-text >
       <p *ngFor="let paragraph of course.desc_en">{{ paragraph }}</p>
-      <p>{{careers}}</p>
     </ion-text>
   </ion-card>
     <ion-card id="title-card" class="info" >
     <ion-text >
-      <p>Careers in: {{course.careers}}</p>
+      <p>MQF Level: Level {{course.mqf}}</p>
+      <p>Careers Opportunities: {{course.careers}}</p>
+      <p>Entry Requriments: {{course.req_entry}}</p>
+      <p>Course Duration: {{course.duration}} schoolastic year/years</p>
     </ion-text>
   </ion-card>
   

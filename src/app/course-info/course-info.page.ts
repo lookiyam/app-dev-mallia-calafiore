@@ -26,6 +26,8 @@ export class CourseInfoPage implements OnInit {
     // The code given is meant for a course, not an institute
     const code = this.route.snapshot.params.code;
 
+
+
     // This service function needs to change -> see getRecipe
     this.course = this.prospectusService.getCourse(code);
 

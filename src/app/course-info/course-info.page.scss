@@ -6,15 +6,12 @@ h3{
     font-family: Arial, Helvetica, sans-serif;
     padding-left: 1rem;
     padding-right: 1rem;
+}
 
+p{
+    
 }
-//margin is used to always make the image in middle in different screens with padding to have some space
-.center-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 0.5rem;
-}
+
 //sub title h1 has bigger font to show its main sub title whole h5 has a less font to show it's secondary
 //both are text aglin center to stay in the middle
 .sub-title{
@@ -42,7 +39,8 @@ h3{
     font-size: 1rem;
     font-family: Arial, Helvetica, sans-serif;
     padding-right: 1rem;
-    padding-left: 1rem;    
+    padding-left: 1rem;
+    line-height: 1.5rem;
 }
 //to diced the image sice and spacing between each slider
 .student-slider {
