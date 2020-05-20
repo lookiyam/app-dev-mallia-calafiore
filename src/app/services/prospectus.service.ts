@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -66,4 +67,13 @@ export class ProspectusService
       {
         return this._data;
       }
-}
+
+      public getCourses(code: string)
+      {
+        var institute = this._data.find(i => i.courses.find(i => i.code == code));     
+        var course = institute.courses.find(c => c.code== code);
+        return course;
+        
+        
+      }
+    }

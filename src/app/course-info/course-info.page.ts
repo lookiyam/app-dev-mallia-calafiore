@@ -10,7 +10,9 @@ import { ProspectusService } from '../services/prospectus.service';
 
 export class CourseInfoPage implements OnInit {
 
-  public institute: any = {};
+  // This needs to reference a course, not an institute!
+
+  public courses: any = {};
 
   constructor(
     public route: ActivatedRoute,
@@ -18,8 +20,12 @@ export class CourseInfoPage implements OnInit {
   ) { }
 
   ngOnInit() {
+    // The code given is meant for a course, not an institute
     const code = this.route.snapshot.params.code;
-    this.institute = this.prospectusService.getInstitute(code);
+
+    // This service function needs to change -> see getRecipe
+    
+    this.courses = this.prospectusService.getCourses(code);
   }
 
 }
