@@ -16,7 +16,7 @@ export class ProspectusService
 
     public async preload()
     {
-      await this.http.get('/assets/prospectus.json', {
+      await this.http.get('/assets/prospectusnew.json', {
         headers: new HttpHeaders()
         .set('Access-Control-Allow-Origin', '*')
         .append('Access-Control-Allow-Methods', 'GET')
