@@ -49,6 +49,7 @@ export class ProspectusService
           case 'gd': return 'GenericDegree.png';
           case 'md': return 'Masters.png';
           case 'cpd': return 'CPD.png';
+          case 'oc': return 'Other.png';
 
         }
           return '';
