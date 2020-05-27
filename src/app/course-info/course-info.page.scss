@@ -1,0 +1,71 @@
+//made the title in the middle with a font size to repsent a title. Included with the font family
+h3{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+p{
+    
+}
+
+//sub title h1 has bigger font to show its main sub title whole h5 has a less font to show it's secondary
+//both are text aglin center to stay in the middle
+.sub-title{
+    h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    }         
+
+    h5 {
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-bottom: 0.5rem;
+    }
+}
+
+//text algin left to stay always to the left 
+//pading was added to have some space from the edges of card
+.info{
+            
+    text-align: left;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    line-height: 1.5rem;
+}
+//to diced the image sice and spacing between each slider
+.student-slider {
+    --slides-margin: 8px;
+    --border-radius: 6px;
+    
+    padding: var(--slides-margin, 8px);
+
+    .student-card {
+        flex: 1;
+        margin: var(--slides-margin, 3px);
+
+        .background-image {
+            background-color: var(--ion-color-medium);
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: var(--border-radius, 2px);
+            overflow: hidden;
+            padding-bottom: 100%;
+            position: relative;
+        }
+//where the info will be placed in bottom and centered 
+        .info{
+            text-align: center;
+            margin: var(--slides-margin, 8px) 0 0;
+        }
+    }
+}

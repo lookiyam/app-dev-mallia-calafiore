@@ -1,0 +1,45 @@
+h3{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#title-card{
+    //made the title in the middle with a font size to repsent a title. Included with the font family
+    ion-card-title {
+        text-align: center;
+        font-size: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0.3rem;
+        }
+}
+//img is a block and add marggins so it always stays in the middle added padding to the top so there is space
+#img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0.3rem;
+}
+
+//to show the ripple effect all around the card
+.ripple-parent {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius, 4px);
+    overflow: hidden;
+    position: relative;
+}
+
+ion-card{
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+    margin: 0 !important;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 10px 10px 10px 10px;
+    height: 14rem;
+    
+}

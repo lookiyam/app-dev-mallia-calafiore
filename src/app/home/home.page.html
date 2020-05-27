@@ -1,9 +1,34 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>home</ion-title>
+      <h3>MCAST Prospectus</h3>
   </ion-toolbar>
 </ion-header>
-
+<!--Doing a grid rows of 2  and coulums of 2 by using ion-card and ion-grid
+in ion- card we instered logo of the instituets in the middle with the name of the insitute
+which card is contected with the href to go to the next page and it has a ripple effect
+the images are called by using img src-->
 <ion-content>
+  <ion-grid>
+    <ion-row>
 
+      <!-- Generated from JSON -->
+      <ion-col
+        size="6"
+        *ngFor="let institute of institutes">
+        <div class="ion-activatable ripple-parent">
+          <ion-card id="title-card" [routerLink]="['/', 'course-levels', institute.code]">
+            <img [src]="'/assets/icon/' + prospectusService.getInstituteIcon(institute)" id="img">
+            <ion-card-title>{{ institute.name_en }}</ion-card-title>
+          </ion-card>
+          <ion-ripple-effect></ion-ripple-effect>
+        </div>
+      </ion-col>
+    </ion-row>
+    <!-- Generated from JSON -->
+    </ion-grid>
 </ion-content>
+<!-- imported the footer custom component-->
+<app-footer-tab></app-footer-tab>
+
+
+

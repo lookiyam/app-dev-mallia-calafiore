@@ -1,9 +1,49 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>course-info</ion-title>
+    <h3 text-wrap>{{ course.institute }}</h3> 
   </ion-toolbar>
 </ion-header>
-
+<!--this page comprehend a card within just some paragraphs, than we implemented
+  an ion slider-->
 <ion-content>
+  
+  <ion-text class="sub-title">
+    <h1>{{ course.title }}</h1>
+    <h5>{{ course.code }}</h5>
+  </ion-text>
+  
+  <ion-card id="title-card" class="info" >
+    <ion-text >
+      <p *ngFor="let paragraph of course.desc_en">{{ paragraph }}</p>
+    </ion-text>
+  </ion-card>
+    <ion-card id="title-card" class="info" >
+    <ion-text >
+      <p>MQF Level: Level {{course.mqf}}</p>
+      <p>Careers Opportunities: {{course.careers}}</p>
+      <p>Entry Requriments: {{course.req_entry}}</p>
+      <p>Course Duration: {{course.duration}} schoolastic year/years</p>
+    </ion-text>
+  </ion-card>
+  
+  <!-- sub title add so it diveds the sections
+  slider used ion-slide where the images can be scrolled sideways where it takes the image from the url assets
+in the bottom can be add info of the work -->
+  <ion-text class="sub-title">
+    <h1>Student Work</h1>
+  </ion-text>
 
+    <ion-slides [options]="categorySlideOpts" class="student-slider">
+      <ion-slide *ngFor="let i of [1, 2, 3, 4, 5]">
+          <div class="student-card">
+              <div
+                  [ngStyle]="{ 'background-image': 'url(/assets/shapes.svg)' }"
+                  class="background-image ion-activatable ripple-parent">
+              </div>
+              <h4 class="info">Info of the work</h4>
+          </div>
+      </ion-slide>
+  </ion-slides>
 </ion-content>
+
+<app-footer-tab></app-footer-tab>

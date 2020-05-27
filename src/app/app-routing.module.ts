@@ -2,9 +2,10 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+  // changed the root, with the home page
   {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
@@ -20,11 +21,19 @@ const routes: Routes = [
     loadChildren: () => import('./course-levels/course-levels.module').then( m => m.CourseLevelsPageModule)
   },
   {
+    path: 'course-levels/:code',
+    loadChildren: () => import('./course-levels/course-levels.module').then( m => m.CourseLevelsPageModule)
+  },
+  {
     path: 'course-list',
     loadChildren: () => import('./course-list/course-list.module').then( m => m.CourseListPageModule)
   },
   {
     path: 'course-info',
+    loadChildren: () => import('./course-info/course-info.module').then( m => m.CourseInfoPageModule)
+  },
+  {
+    path: 'course-info/:code',
     loadChildren: () => import('./course-info/course-info.module').then( m => m.CourseInfoPageModule)
   }
 ];

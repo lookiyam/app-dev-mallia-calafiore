@@ -1,3 +1,14 @@
-<p>
-  footer-tab works!
-</p>
+<!--implemented footer with 2 buttons, back buttons that leads to the previous loaded page
+and the hamburger (ha ha ha  -.- ) menue that recalls the standard ionic  menue component-->
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-button (click)="location.back()">
+        <ion-icon name="arrow-back-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

@@ -1,9 +1,22 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>course-levels</ion-title>
+      <h3 text-wrap>{{ prospectusService.getInstituteName(institute) }}</h3>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+<img [src]="'/assets/icon/' + prospectusService.getInstituteIcon(institute)" id="img" class="center">  
 
+  <!-- the page is composed by an ion card that comprehends a list item
+  with labels and an icon, the ion item works as a button that redirects to course list page
+  by routerLink-->
+  <ion-card id="title-card">
+    <ion-list *ngFor="let course of institute.courses">
+      <ion-item button ripple [routerLink]="['/', 'course-info', course.code]">
+        <ion-label class="list" text-wrap >{{ course.title }}</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
 </ion-content>
+
+<app-footer-tab></app-footer-tab>
